@@ -1,3 +1,10 @@
+'''
+Khang Le
+kle2
+Homework 02
+Code for DES Decryption
+'''
+
 from keys import generate_keys
 import permutations
 
