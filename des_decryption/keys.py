@@ -34,6 +34,6 @@ def generate_keys(key):
         
         permuted_key = permute(c_shifted + d_shifted)
         keys.append(permuted_key)
-    
-    #print(keys)
+        print(f'Key {layer + 1:<2}: {permuted_key}')
+
     return keys

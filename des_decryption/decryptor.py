@@ -48,13 +48,19 @@ def main():
         
         f_value = f(prev_right, k)
         new_right = xor(prev_left, f_value)
-        
+
+        print(f'Round {i+1}:')
+        print(f'L{i+1:<2}: {new_left}')
+        print(f'R{i+1:<2}: {new_right}')
+
         prev_left = new_left
         prev_right = new_right
 
     layer16 = new_right + new_left
     final = ''.join([layer16[i-1] for i in permutations.ip_1])
-    
+   
+    print(final)
+
     text = ''.join(chr(int(final[i:i+8], 2)) for i in range(0, len(final), 8))
     print(text) # UNDIRISH
 
